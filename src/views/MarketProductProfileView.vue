@@ -7,7 +7,7 @@
             </div>
         </div>
 
-        <div v-else>
+        <div v-else class="no-product">
             <img src="https://www.facebook.com/images/comet/empty_states_icons/messages/null_states_messages_gray_wash.svg" alt="">
             <h1>When you start selling, your listings will appear here.</h1>
             <button @click="showProductForm">+  Create new listing</button>
@@ -362,5 +362,21 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #1b74e4;
+}
+.no-product{
+    width: 60%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.no-product img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+}
+.no-product h1{
+    text-align: center;
 }
 </style>

@@ -193,7 +193,7 @@ import { useToast } from 'vue-toast-notification';
 }
 .closePopup {
   width: 10%;
-  padding-left: 30%;
+  margin-left: 10px;
   cursor: pointer;
 }
 
