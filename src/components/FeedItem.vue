@@ -537,4 +537,12 @@ const hidePost = (post_id) =>{
     justify-content: space-between;
     margin-top: -25px;
 }
+a {
+  text-decoration: none; 
+  color: inherit;
+}
+
+a:visited {
+  color: inherit; 
+}
 </style>
