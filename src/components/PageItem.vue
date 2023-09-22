@@ -33,7 +33,7 @@ let page = reactive(props.page);
 }
 .page-cover img {
   width: 100%;
-  height: auto;
+  height: 400px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }

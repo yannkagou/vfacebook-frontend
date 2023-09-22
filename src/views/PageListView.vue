@@ -151,6 +151,7 @@ const onFileSelected = () => {
 
 <style scoped>
 .main{
+  width: 100%;
   margin-top: 60px;
   background-color: #eee;
   height: 100vh;
