@@ -1,7 +1,7 @@
 <template>
 
     <div class="story-add"> 
-        <img :src="'http://localhost:8000' + userStore.user.avatar">
+        <img :src="'https://yannickkagou.pythonanywhere.com' + userStore.user.avatar">
         <button @click="showPopup">+</button>
     </div>
 
@@ -23,7 +23,7 @@
             <div class="postform-top">
 
                 <div class="header">
-                    <img :src="'http://localhost:8000' + userStore.user.avatar" alt="">
+                    <img :src="'https://yannickkagou.pythonanywhere.com' + userStore.user.avatar" alt="">
                     <p>{{userStore.user.firstname}} {{userStore.user.lastname}}</p>
                 </div> 
 
@@ -104,6 +104,10 @@ import { useToast } from 'vue-toast-notification';
 
     let addPicture = ref(false);
     let addVideo = ref(false);
+
+    onBeforeMount(async () => {
+        await userStore.initStore();
+    })
 
     const togglePicture = () => {
         addPicture.value = !addPicture.value
