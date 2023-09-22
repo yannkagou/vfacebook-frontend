@@ -78,8 +78,10 @@
 .products-list{
     width: 100%;
     margin: 10px 0;
+    flex-wrap: wrap;
 }
 .products {
+  display: flex;
   width: calc(33.33% - 10px); /* Ajustez la largeur en fonction de votre mise en page */
   margin-bottom: 20px;
   background-color: #fff;

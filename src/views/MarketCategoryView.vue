@@ -90,6 +90,7 @@ import { useToast } from 'vue-toast-notification';
 }
 .products-list{
     width: 100%;
+    flex-wrap: wrap;
 }
 .products {
     display: flex;

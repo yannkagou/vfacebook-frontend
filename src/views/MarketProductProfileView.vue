@@ -214,6 +214,7 @@ watch(
 .products-list{
     width: 100%;
     margin: 10px 0;
+    flex-wrap: wrap;
 }
 .products {
     display: flex;
