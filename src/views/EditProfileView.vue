@@ -22,8 +22,8 @@
 
                     <div class="myform">
            
-                        <label for="user-banner"><p>Upload your cover</p><i class="fa-solid fa-camera"></i></label>
-                        <input type="file" id="user-banner" ref="fileInputRef" style="visibility: hidden;display: none;">
+                        <label for="user-banner" id="upload-image"><p>Upload your cover</p><i class="fa-solid fa-camera"></i></label>
+                        <input type="file" id="user-banner" ref="fileInputRef" @change="onFileSelected" style="visibility: hidden;display: none;">
 
                     </div>
 
@@ -70,7 +70,7 @@ let errors = ref([]);
     
 
 const submitForm = () => {
-    errors = []
+    errors.value = []
 
     if (form.email === '') {
         errors.value.push('Your e-mail is missing')
@@ -109,6 +109,14 @@ const submitForm = () => {
                 console.log('error', error)
             })
         }
+    }
+    const onFileSelected = () => {
+        const imageView = document.getElementById("upload-image")
+        let imgLink = URL.createObjectURL(fileInputRef.value.files[0]);
+        imageView.style.backgroundImage = `url(${imgLink})`;
+        imageView.style.backgroundSize = "cover";
+        imageView.style.backgroundPosition = "center";
+        console.log('Selected file:', fileInputRef.value.files)
     }
 </script>
 
