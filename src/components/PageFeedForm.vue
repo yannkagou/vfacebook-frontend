@@ -47,7 +47,7 @@
             <input v-model="body" :placeholder="'What is on your mind ' + page.name + '?'">
             <div class="picture" v-if="addPicture">
                 <i class="fas fa-xmark" @click="togglePicture"></i>
-                <label class="add" for="form-image">
+                <label class="add" for="form-image" id="upload-image">
                     <i class="fa-solid fa-image" style="color: rgb(172, 172, 255);"></i>
                     <input type="file" id="form-image" style="visibility: hidden;display: none;" @change="onFileSelected" ref="fileInputRef" multiple>
                     <p class="title">Add Photos</p>
@@ -56,7 +56,7 @@
             </div>
             <div class="picture" v-if="addVideo">
                 <i class="fas fa-xmark" @click="toggleVideo"></i>
-                <label class="add" for="form-video">
+                <label class="add" for="form-video" id="upload-video">
                     <i class="fa-solid fa-film" style="color: rgb(172, 172, 255);"></i>
                     <input type="file" id="form-video" style="visibility: hidden;display: none;" @change="onVideoSelected" ref="videoInputRef" multiple>
                     <p class="title">Add Videos</p>
