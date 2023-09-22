@@ -3,7 +3,7 @@
         <div class="left">
             <router-link :to="{name:'p_posts', params: {'id': userStore.user.id}}">
                 <div class="logo">
-                    <img :src="'http://localhost:8000' + userStore.user.avatar" alt="">
+                    <img :src="'https://yannickkagou.pythonanywhere.com' + userStore.user.avatar" alt="">
                     <p>{{userStore.user.firstname}} {{userStore.user.lastname}}</p>
                 </div>
             </router-link>
@@ -93,7 +93,7 @@
 
                         <div class="story-card">
 
-                            <img :src=" 'http://localhost:8000' + user.get_avatar" class="story-icon" @click="toastShowStory">
+                            <img :src=" 'https://yannickkagou.pythonanywhere.com' + user.get_avatar" class="story-icon" @click="toastShowStory">
 
                             <p>{{ user.firstname }}</p>
 
@@ -119,7 +119,7 @@
 
                         <div class="story-card" v-if="page.stories.length">
 
-                            <img :src=" 'http://localhost:8000' + page.cover" class="story-icon" @click="toastShowPageStory">
+                            <img :src=" 'https://yannickkagou.pythonanywhere.com' + page.cover" class="story-icon" @click="toastShowPageStory">
 
                             <p>{{ page.name }}</p>
 
@@ -181,7 +181,7 @@
                 </router-link>
                 <router-link :to="{name:'page_posts', params:{'id': pages[0].id}}" v-else>
                     <div class="page-img">
-                        <img :src="'http://localhost:8000' + pages[0].cover">
+                        <img :src="'https://yannickkagou.pythonanywhere.com' + pages[0].cover">
                         <p>{{pages[0].name}}</p>
                     </div>
                 </router-link>
@@ -234,7 +234,7 @@
                 <div v-if="friends.length">
                 
                     <div class="contact" v-for="friend in friends" :key="friend.id">
-                        <router-link :to="{name:'p_posts', params: {'id': friend.id}}"> <img :src="'http://localhost:8000' + friend.get_avatar"> </router-link>
+                        <router-link :to="{name:'p_posts', params: {'id': friend.id}}"> <img :src="'https://yannickkagou.pythonanywhere.com' + friend.get_avatar"> </router-link>
                         <p>{{ friend.firstname }} {{ friend.lastname }}</p>
                     </div> 
                     
@@ -253,7 +253,7 @@
 
                             <div class="friend-request-item-head">
                                 <router-link :to="{name:'p_posts', params: {'id': friendshipRequest.created_by.id}}"> 
-                                    <img :src="'http://localhost:8000' + friendshipRequest.created_by.get_avatar"> 
+                                    <img :src="'https://yannickkagou.pythonanywhere.com' + friendshipRequest.created_by.get_avatar"> 
                                 </router-link>
                                 <div class="friend-request-item-body">
                                     <p>

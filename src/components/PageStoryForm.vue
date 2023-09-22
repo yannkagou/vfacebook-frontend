@@ -1,7 +1,7 @@
 <template>
 
     <div class="story-add"> 
-        <img :src="'http://localhost:8000' + page.cover">
+        <img :src="'https://yannickkagou.pythonanywhere.com' + page.cover">
         <button @click="showPopup">+</button>
     </div>
 
@@ -23,7 +23,7 @@
             <div class="postform-top">
 
                 <div class="header">
-                    <img :src="'http://localhost:8000' + page.cover" alt="">
+                    <img :src="'https://yannickkagou.pythonanywhere.com' + page.cover" alt="">
                     <p>{{page.name}}</p>
                 </div> 
 

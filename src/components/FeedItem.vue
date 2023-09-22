@@ -4,7 +4,7 @@
         <div class="posts-top">
             <div class="img-name">
                 <router-link :to="{name:'p_posts', params:{'id': post.created_by.id}}">
-                    <img :src=" 'http://localhost:8000' + post.created_by.get_avatar">
+                    <img :src=" 'https://yannickkagou.pythonanywhere.com' + post.created_by.get_avatar">
                 </router-link>
                 <div class="name-time">
                     <p class="name">
@@ -30,30 +30,30 @@
 
         <template v-if="post.attachments">
             <div class="content" v-if="post.attachments.length == 1">
-                <img class="attachment" v-for="image in post.attachments" v-bind:key="image.id" :src="'http://localhost:8000' + image.get_image">
+                <img class="attachment" v-for="image in post.attachments" v-bind:key="image.id" :src="'https://yannickkagou.pythonanywhere.com' + image.get_image">
             </div>
 
             <div class="content" v-if="post.attachments.length == 2">
-                <img class="attachment2" v-for="image in post.attachments" v-bind:key="image.id" :src="'http://localhost:8000' + image.get_image">
+                <img class="attachment2" v-for="image in post.attachments" v-bind:key="image.id" :src="'https://yannickkagou.pythonanywhere.com' + image.get_image">
             </div>
 
             <div class="content" v-if="post.attachments.length > 2">
-                <img class="attachment3" v-for="image in post.attachments" v-bind:key="image.id" :src="'http://localhost:8000' + image.get_image">
+                <img class="attachment3" v-for="image in post.attachments" v-bind:key="image.id" :src="'https://yannickkagou.pythonanywhere.com' + image.get_image">
             </div>
             
         </template>
         <template v-if="post.videos">
 
             <div class="content" v-if="post.videos.length == 1">
-                <video class="video" v-for="video in post.videos" :key="video.id" :src="'http://localhost:8000' + video.get_video" loop controls controlsList="nofullscreen"></video>
+                <video class="video" v-for="video in post.videos" :key="video.id" :src="'https://yannickkagou.pythonanywhere.com' + video.get_video" loop controls controlsList="nofullscreen"></video>
             </div>
 
             <div class="content" v-if="post.videos.length == 2">
-                <video class="video2" v-for="video in post.videos" :key="video.id" :src="'http://localhost:8000' + video.get_video" loop controls controlsList="nofullscreen"></video>
+                <video class="video2" v-for="video in post.videos" :key="video.id" :src="'https://yannickkagou.pythonanywhere.com' + video.get_video" loop controls controlsList="nofullscreen"></video>
             </div>
 
             <div class="content" v-if="post.videos.length > 2">
-                <video class="video3" v-for="video in post.videos" :key="video.id" :src="'http://localhost:8000' + video.get_video" loop controls controlsList="nofullscreen"></video>
+                <video class="video3" v-for="video in post.videos" :key="video.id" :src="'https://yannickkagou.pythonanywhere.com' + video.get_video" loop controls controlsList="nofullscreen"></video>
             </div>
        
         </template>
@@ -98,7 +98,7 @@
         <hr>
 
         <div class="comment-form">
-            <img :src="'http://localhost:8000' + userStore.user.avatar">
+            <img :src="'https://yannickkagou.pythonanywhere.com' + userStore.user.avatar">
             <form @submit.prevent="submitCommentForm" class="comment-zone">
                     <input type="text" v-model="body" :placeholder="'What do you think ' + userStore.user.firstname + ' ' + userStore.user.lastname + '?'">
                     <button type="submit" class="comment-submit"><i class="fa-solid fa-arrow-right"></i></button>

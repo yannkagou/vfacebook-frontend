@@ -19,7 +19,7 @@
             <div class="posts-top">
 
               <div class="img-name">
-                <img :src=" 'http://localhost:8000' + post.created_by.get_avatar">
+                <img :src=" 'https://yannickkagou.pythonanywhere.com' + post.created_by.get_avatar">
                 <div class="name-time">
                   <p class="name">
                     <router-link :to="{name:'p_posts', params:{'id': post.created_by.id}}">
@@ -42,10 +42,10 @@
 
                 <p>{{ post.body }}</p>
                 <template v-if="post.attachments.length">
-                    <img v-for="image in post.attachments" v-bind:key="image.id" :src="'http://localhost:8000' + image.get_image" class="attachment">
+                    <img v-for="image in post.attachments" v-bind:key="image.id" :src="'https://yannickkagou.pythonanywhere.com' + image.get_image" class="attachment">
                 </template>
                 <template v-if="post.videos">
-                    <video class="attachment" v-for="video in post.videos" :key="video.id" :src="'http://localhost:8000' + video.get_video" controls></video>
+                    <video class="attachment" v-for="video in post.videos" :key="video.id" :src="'https://yannickkagou.pythonanywhere.com' + video.get_video" controls></video>
                 </template>
 
             </div>
@@ -54,7 +54,7 @@
 
             <div class="comment-form">
 
-                <img :src="'http://localhost:8000' + userStore.user.avatar" alt="">
+                <img :src="'https://yannickkagou.pythonanywhere.com' + userStore.user.avatar" alt="">
                 <form class="comment-input" @submit.prevent="submitCommentForm" method="post">
                     <input type="text" v-model="body" class="" placeholder="Write a comment...">
                     <button type="submit"><i class="fa-solid fa-arrow-right" style="color: rgb(150, 150, 247);"></i></button>
@@ -66,7 +66,7 @@
 
                 <div class="comment" v-for="comment in post.comments" v-bind:key="comment.id">
 
-                  <img :src="'http://localhost:8000' + comment.created_by.get_avatar">
+                  <img :src="'https://yannickkagou.pythonanywhere.com' + comment.created_by.get_avatar">
 
                   <div class="comment-container">
 

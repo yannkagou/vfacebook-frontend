@@ -2,7 +2,7 @@
 
         <div class="my-post">
         <div class="post-top"> 
-            <img :src="'http://localhost:8000' + userStore.user.avatar">
+            <img :src="'https://yannickkagou.pythonanywhere.com' + userStore.user.avatar">
             <input @click="showPopup" type="text" :placeholder="'What is on your mind ' + userStore.user.firstname + ' ' + userStore.user.lastname + '?'">
         </div>
         <hr>
@@ -38,7 +38,7 @@
         <div class="postform-top">
 
             <div class="header">
-                <img :src="'http://localhost:8000' + userStore.user.avatar" alt="">
+                <img :src="'https://yannickkagou.pythonanywhere.com' + userStore.user.avatar" alt="">
                 <p>{{userStore.user.firstname}} {{userStore.user.lastname}}</p>
             </div> 
             

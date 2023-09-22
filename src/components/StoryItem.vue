@@ -4,7 +4,7 @@
     <div class="thestory-content1"  v-if="(story.body && story.attachments.length) || (story.body && story.videos.length)">
         <div class="thestory-head">
             <div class="name-time">
-                <img :src=" 'http://localhost:8000' + story.created_by.get_avatar">
+                <img :src=" 'https://yannickkagou.pythonanywhere.com' + story.created_by.get_avatar">
                 <div class="name-time-contain">
                     <p class="name">
                         <router-link :to="{name:'p_posts', params:{'id': story.created_by.id}}">
@@ -29,10 +29,10 @@
                 <p>{{ story.body }}</p>
             </div>
             <div class="story-img1" v-if="story.attachments.length">
-                <img v-for="image in story.attachments" v-bind:key="image.id" :src="'http://localhost:8000' + image.get_image">
+                <img v-for="image in story.attachments" v-bind:key="image.id" :src="'https://yannickkagou.pythonanywhere.com' + image.get_image">
             </div>
             <div class="story-video1" v-if="story.videos.length">
-                <video v-for="video in story.videos" :key="video.id" :src="'http://localhost:8000' + video.get_video" loop controls controlsList="nofullscreen"></video>
+                <video v-for="video in story.videos" :key="video.id" :src="'https://yannickkagou.pythonanywhere.com' + video.get_video" loop controls controlsList="nofullscreen"></video>
             </div> 
         </div>
     </div>
@@ -40,7 +40,7 @@
     <div class="thestory-content"  v-if="story.body && !story.attachments.length && !story.videos.length">
         <div class="thestory-head">
             <div class="name-time">
-                <img :src=" 'http://localhost:8000' + story.created_by.get_avatar">
+                <img :src=" 'https://yannickkagou.pythonanywhere.com' + story.created_by.get_avatar">
                 <div class="name-time-contain">
                     <p class="name">
                         <router-link :to="{name:'p_posts', params:{'id': story.created_by.id}}">
@@ -70,7 +70,7 @@
     <div class="thestory-content" v-if="story.attachments.length && !story.body">
         <div class="thestory-head">
             <div class="name-time">
-                <img :src=" 'http://localhost:8000' + story.created_by.get_avatar">
+                <img :src=" 'https://yannickkagou.pythonanywhere.com' + story.created_by.get_avatar">
                 <div class="name-time-contain">
                     <p class="name">
                         <router-link :to="{name:'p_posts', params:{'id': story.created_by.id}}">
@@ -92,7 +92,7 @@
         </div>
         <div class="story-contain">
             <div class="story-img" v-if="story.attachments.length">
-                <img v-for="image in story.attachments" v-bind:key="image.id" :src="'http://localhost:8000' + image.get_image">
+                <img v-for="image in story.attachments" v-bind:key="image.id" :src="'https://yannickkagou.pythonanywhere.com' + image.get_image">
             </div>
         </div>
         
@@ -101,7 +101,7 @@
     <div class="thestory-content" v-if="story.videos.length && !story.body">
         <div class="thestory-head">
             <div class="name-time">
-                <img :src=" 'http://localhost:8000' + story.created_by.get_avatar">
+                <img :src=" 'https://yannickkagou.pythonanywhere.com' + story.created_by.get_avatar">
                 <div class="name-time-contain">
                     <p class="name">
                         <router-link :to="{name:'p_posts', params:{'id': story.created_by.id}}">
@@ -123,11 +123,11 @@
         </div>
         <div class="story-contain">
             <div class="story-video" v-if="story.videos.length">
-                <video v-for="video in story.videos" :key="video.id" :src="'http://localhost:8000' + video.get_video" loop controls controlsList="nofullscreen"></video>
+                <video v-for="video in story.videos" :key="video.id" :src="'https://yannickkagou.pythonanywhere.com' + video.get_video" loop controls controlsList="nofullscreen"></video>
             </div> 
         </div>
         <div class="story-video" v-if="story.videos.length">
-            <video v-for="video in story.videos" :key="video.id" :src="'http://localhost:8000' + video.get_video" loop controls controlsList="nofullscreen"></video>
+            <video v-for="video in story.videos" :key="video.id" :src="'https://yannickkagou.pythonanywhere.com' + video.get_video" loop controls controlsList="nofullscreen"></video>
         </div> 
     </div>
     </div>          

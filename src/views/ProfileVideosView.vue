@@ -3,7 +3,7 @@
     <h2>Videos</h2>
     <div class="photo-card" v-if="filteredVideos.length">
       <div class="photo" v-for="video in filteredVideos" :key="video.id">
-        <video :src="'http://localhost:8000' + video.get_video" controls></video>
+        <video :src="'https://yannickkagou.pythonanywhere.com' + video.get_video" controls></video>
       </div>
     </div>
     <div class="photo-card" v-else>

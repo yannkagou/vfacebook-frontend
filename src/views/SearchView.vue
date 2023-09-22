@@ -45,7 +45,7 @@
           <div class="pages-container">
             <div class="page-box" v-for="user in users" :key="user.id">
               <router-link :to="{name:'p_posts', params: {'id': user.id}}">
-                <img :src="'http://localhost:8000' + user.get_avatar">
+                <img :src="'https://yannickkagou.pythonanywhere.com' + user.get_avatar">
                 <p><strong>
                     {{ user.firstname }} {{ user.lastname }}
                 </strong></p>
@@ -87,7 +87,7 @@
           <div class="pages-container">
             <div class="page-box" v-for="user in users" :key="user.id">
               <router-link :to="{name:'p_posts', params: {'id': user.id}}">
-              <img :src="'http://localhost:8000' + user.get_avatar">
+              <img :src="'https://yannickkagou.pythonanywhere.com' + user.get_avatar">
               <p><strong>
                   {{ user.firstname }} {{ user.lastname }} 
               </strong></p>

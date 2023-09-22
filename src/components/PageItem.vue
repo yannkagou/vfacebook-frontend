@@ -2,7 +2,7 @@
     <div class="page-card">
         <div class="page-cover">
             <router-link :to="{name:'page_posts', params: {'id': page.id}}">
-                <img :src="'http://localhost:8000' + page.cover">
+                <img :src="'https://yannickkagou.pythonanywhere.com' + page.cover">
             </router-link>
         </div>
         <div class="page-details">

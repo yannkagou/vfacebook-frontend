@@ -2,7 +2,7 @@
 
     <div class="my-post">
     <div class="post-top"> 
-        <img :src="'http://localhost:8000' + page.cover">
+        <img :src="'https://yannickkagou.pythonanywhere.com' + page.cover">
         <input @click="showPopup" type="text" placeholder="What is on your mind ?">
     </div>
     <hr>
@@ -38,7 +38,7 @@
     <div class="postform-top">
 
         <div class="header">
-            <img :src="'http://localhost:8000' + page.cover">
+            <img :src="'https://yannickkagou.pythonanywhere.com' + page.cover">
             <p>{{page.name}}</p>
         </div> 
         

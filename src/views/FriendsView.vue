@@ -27,7 +27,7 @@
         <div class="head">
 
           <router-link :to="{ name: 'p_posts', params: { 'id': friend.id } }">
-            <img :src=" 'http://localhost:8000' + friend.get_avatar">
+            <img :src=" 'https://yannickkagou.pythonanywhere.com' + friend.get_avatar">
           </router-link>
 
           <p><strong>{{ friend.firstname }} {{ friend.lastname }}</strong></p>

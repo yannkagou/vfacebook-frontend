@@ -254,7 +254,7 @@
             </router-link>  
           </div>
           <router-link v-if="userStore.user.id !== null && userStore.user.id !== undefined" :to="{name:'p_posts', params: {id: userStore.user.id}}">
-            <img :src="'http://localhost:8000' + userStore.user.avatar">
+            <img :src="'https://yannickkagou.pythonanywhere.com' + userStore.user.avatar">
           </router-link>
         </div>
 

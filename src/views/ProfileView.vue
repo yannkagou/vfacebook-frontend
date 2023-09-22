@@ -5,11 +5,11 @@
         <div class="top">
 
             <div class="cover">
-                <img :src="'http://localhost:8000' + user.get_avatar">
+                <img :src="'https://yannickkagou.pythonanywhere.com' + user.get_avatar">
             </div>
     
             <div class="info">
-                <img :src="'http://localhost:8000' + user.get_avatar">
+                <img :src="'https://yannickkagou.pythonanywhere.com' + user.get_avatar">
 
                 <div class="name">
                     <h1>{{ user.firstname }} {{ user.lastname }}</h1>

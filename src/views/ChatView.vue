@@ -30,7 +30,7 @@
             <div class="conv-head" :class="conversation.id === activeConversation? 'set-conv' : 'unset-conv'" v-for="user in conversation.users" v-bind:key="user.id">
 
               <div class="conv-head-item" v-if="user.id !== userStore.user.id">
-                <img :src="'http://localhost:8000' + user.get_avatar">
+                <img :src="'https://yannickkagou.pythonanywhere.com' + user.get_avatar">
                 <div class="conv-subtitle">
                   <p class="name" v-if="user.id !== userStore.user.id">
                     {{ user.firstname }} {{ user.lastname }}
@@ -60,16 +60,16 @@
               <div class="my-message-body">
                 
                 <div v-if="message.attachments">
-                  <img class="attachment" v-for="image in message.attachments" v-bind:key="image.id" :src="'http://localhost:8000' + image.get_image">
+                  <img class="attachment" v-for="image in message.attachments" v-bind:key="image.id" :src="'https://yannickkagou.pythonanywhere.com' + image.get_image">
                 </div>
 
                 <div v-if="message.videos">
-                    <video class="video" v-for="video in message.videos" :key="video.id" :src="'http://localhost:8000' + video.get_video" loop controls controlsList="nofullscreen">
+                    <video class="video" v-for="video in message.videos" :key="video.id" :src="'https://yannickkagou.pythonanywhere.com' + video.get_video" loop controls controlsList="nofullscreen">
                     </video>
                 </div>
 
                 <div v-if="message.voices">
-                  <audio class="voice" v-for="voice in message.voices" :key="voice.id" :src="'http://localhost:8000' + voice.get_voice" controls>
+                  <audio class="voice" v-for="voice in message.voices" :key="voice.id" :src="'https://yannickkagou.pythonanywhere.com' + voice.get_voice" controls>
                   </audio>
                 </div>
                 <p class="message-text" v-if="message.body">{{ message.body }}</p>
@@ -77,27 +77,27 @@
 
               </div>
               
-              <img class="avatar-icon" :src="'http://localhost:8000' + message.created_by.get_avatar">
+              <img class="avatar-icon" :src="'https://yannickkagou.pythonanywhere.com' + message.created_by.get_avatar">
 
             </div>
 
             <div  class="your-message" v-else>
 
-              <img class="avatar-icon" :src="'http://localhost:8000' + message.created_by.get_avatar">
+              <img class="avatar-icon" :src="'https://yannickkagou.pythonanywhere.com' + message.created_by.get_avatar">
       
               <div class="your-message-body">
                 
                 <div v-if="message.attachments">
-                  <img class="attachment" v-for="image in message.attachments" v-bind:key="image.id" :src="'http://localhost:8000' + image.get_image">
+                  <img class="attachment" v-for="image in message.attachments" v-bind:key="image.id" :src="'https://yannickkagou.pythonanywhere.com' + image.get_image">
                 </div>
 
                 <div v-if="message.videos">
-                    <video class="video" v-for="video in message.videos" :key="video.id" :src="'http://localhost:8000' + video.get_video" loop controls controlsList="nofullscreen">
+                    <video class="video" v-for="video in message.videos" :key="video.id" :src="'https://yannickkagou.pythonanywhere.com' + video.get_video" loop controls controlsList="nofullscreen">
                     </video>
                 </div>
 
                 <div v-if="message.voices">
-                  <audio class="voice" v-for="voice in message.voices" :key="voice.id" :src="'http://localhost:8000' + video.get_voice" controls>
+                  <audio class="voice" v-for="voice in message.voices" :key="voice.id" :src="'https://yannickkagou.pythonanywhere.com' + video.get_voice" controls>
                   </audio>
                 </div>
 

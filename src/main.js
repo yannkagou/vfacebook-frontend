@@ -14,7 +14,7 @@ import router from './router'
 
 const app = createApp(App)
 
-axios.defaults.baseURL='http://localhost:8000'
+axios.defaults.baseURL='https://yannickkagou.pythonanywhere.com'
 axios.defaults.withCredentials = true
 
 app.use(createPinia())

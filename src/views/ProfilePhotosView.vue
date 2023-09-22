@@ -3,7 +3,7 @@
     <h2>Photos</h2>
     <div class="photo-card" v-if="posts.length">
       <div class="photo" v-for="photo in filteredPhotos" :key="photo.id">
-        <img :src="'http://localhost:8000' + photo.get_image">
+        <img :src="'https://yannickkagou.pythonanywhere.com' + photo.get_image">
       </div>
     </div>
     <div class="photo-card" v-else>

@@ -16,7 +16,7 @@
         <h2>Photos</h2>
         <div class="photo-card" v-if="filteredPhotos.length">
           <div class="photo" v-for="photo in filteredPhotos" :key="photo.id">
-            <img :src="'http://localhost:8000' + photo.get_image">
+            <img :src="'https://yannickkagou.pythonanywhere.com' + photo.get_image">
           </div>
         </div>
       </div>
@@ -25,7 +25,7 @@
         <h2>Videos</h2>
         <div class="photo-card" v-if="filteredVideos.length">
           <div class="photo" v-for="video in filteredVideos" :key="video.id">
-            <video :src="'http://localhost:8000' + video.get_video" controls></video>
+            <video :src="'https://yannickkagou.pythonanywhere.com' + video.get_video" controls></video>
           </div>
         </div>
       </div>

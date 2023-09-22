@@ -5,11 +5,11 @@
         <div class="top" v-if="page.id">
 
             <div class="cover">
-                <img :src="'http://localhost:8000' + page.cover">
+                <img :src="'https://yannickkagou.pythonanywhere.com' + page.cover">
             </div>
     
             <div class="info">
-                <img :src="'http://localhost:8000' + page.cover">
+                <img :src="'https://yannickkagou.pythonanywhere.com' + page.cover">
 
                 <div class="name">
                     <h1>{{ page.name }}</h1>
@@ -25,7 +25,7 @@
 
                         <div class="story-card" v-if="stories.length">
 
-                            <img :src=" 'http://localhost:8000' + page.cover" class="story-icon" @click="toastShowStory">
+                            <img :src=" 'https://yannickkagou.pythonanywhere.com' + page.cover" class="story-icon" @click="toastShowStory">
 
                             <Swiper :slides-per-view="1"  @swiper="onSwiper" @slideChange="onSlideChange" navigation v-if="stories.length" class="stories-list-user" v-show="showStory">
 
@@ -64,7 +64,7 @@
 
                         <div class="story-card" v-if="stories.length">
 
-                            <img :src=" 'http://localhost:8000' + page.cover" class="story-icon" @click="toastShowStory">
+                            <img :src=" 'https://yannickkagou.pythonanywhere.com' + page.cover" class="story-icon" @click="toastShowStory">
 
                             <Swiper :slides-per-view="1"  @swiper="onSwiper" @slideChange="onSlideChange" navigation v-if="stories.length" class="stories-list-user" v-show="showStory">
 
