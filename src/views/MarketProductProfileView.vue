@@ -212,9 +212,12 @@ watch(
     margin-left: 20px;
 }
 .products-list{
+    display: flex;
     width: 100%;
     margin: 10px 0;
     flex-wrap: wrap;
+    justify-content: space-between;
+  align-items: center;
 }
 .products {
     display: flex;
