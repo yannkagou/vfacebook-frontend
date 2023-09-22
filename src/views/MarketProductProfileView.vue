@@ -158,6 +158,7 @@ const submitProductForm =  () => {
             console.log('the new product data', response.data)
             myProducts.value.unshift(response.data)
             isLoading.value = false
+            showProductForm();
             toast.success("Product added")
             category.value = ''
             name.value = ''
