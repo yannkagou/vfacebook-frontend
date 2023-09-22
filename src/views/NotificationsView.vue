@@ -98,4 +98,8 @@ const readNotification = async (notification) => {
     justify-content: center;
     align-items: center;
 }
+.notification button{
+    background-color: #fff;
+    border: 1px solid #eee;
+}
 </style>
