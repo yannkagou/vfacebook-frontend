@@ -290,20 +290,26 @@ const stopRecording = () => {
 const submitMessageForm = async () => {
         let formData = new FormData()
         if (fileInputRef.value){
-          if (fileInputRef.value.files[0].type.startsWith('image/')) {
-            formData.append('image', fileInputRef.value.files[0])
-          }else{
-              toast.error('You should select an image')
-              errors.value.push('Try again')
-          }
+          for (let i=0; i < fileInputRef.value.files.length; i++){
+                const file = fileInputRef.value.files[i];
+                if (file.type.startsWith('image/')) {
+                    formData.append('image', file);
+                }else{
+                    toast.error('You should select an image')
+                    errors.value.push('Try again')
+                }
+            }
         }
         if (videoInputRef.value){
-          if (videoInputRef.value.files[0].type.startsWith('video/')) {
-            formData.append('video', videoInputRef.value.files[0]);
-          }else{
-              toast.error('You should select a video with size less than 5MB')
-              errors.value.push('Try again')
-          }
+          for (let i=0; i < videoInputRef.value.files.length; i++){
+                const file = videoInputRef.value.files[i];
+                if (file.type.startsWith('video/')) {
+                    formData.append('video', file);
+                }else{
+                    toast.error('You should select a video with size less than 5MB')
+                    errors.value.push('Try again')
+                }   
+            }
         }
         formData.append('body', body.value)
 
