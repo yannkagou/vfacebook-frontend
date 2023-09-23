@@ -97,7 +97,7 @@
                 </div>
 
                 <div v-if="message.voices">
-                  <audio class="voice" v-for="voice in message.voices" :key="voice.id" :src="'https://yannickkagou.pythonanywhere.com' + video.get_voice" controls>
+                  <audio class="voice" v-for="voice in message.voices" :key="voice.id" :src="'https://yannickkagou.pythonanywhere.com' + voice.get_voice" controls>
                   </audio>
                 </div>
 
